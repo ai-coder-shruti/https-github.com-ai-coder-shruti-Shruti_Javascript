@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>dddd</h2>
+    
+    <script>
+// 1.Swap two no without using a third variable. use only arithmetic and assignment operator.
+let a=5;
+let b=10;
+console.log("Before swapping a no");
+console.log("a=",a);
+console.log("b=",b);
+a= a+b;
+b= a-b;
+a=a-b;
+console.log("After swapping the no:");
+console.log("a=",a);
+console.log("b=",b);
+//2.Check if a No is even or odd .use the modulus operator and logical operator
+let n=4;
+let r=["even","odd"];
+console.log(n + "is"+r[n%2]);
+//3.find the maximum of three numbers use only comparison and llogical operator
+let l=10,m=25,c=15;
+let max=l;
+(l>max)&&(max=a);
+(m>max)&&(max=b);
+(c>max)&&(max=c);
+console.log("Maximum is:",max);
+//4.write a simple Calculator Function that takes two no and an operator and returns the result
+//function Cal (no1,no2,o){
+//if(o === '+')return no1+no2;
+//if(o === '-')return no1-no2;
+//if(o === '*')return no1*no2;
+//if(o === '%')return no1%no2;
+//if(o === '/')return no1/no2;
+//if(o === '**')return no1**no2;
+//return "invalid o";
+//}
+//let result=cal(10,5,'+');
+//console.log("result is:",result);
+
+//5.Check if a Character is a vowel or consonant use logical and comparison operator
+function checkVowel (c){
+    c=c.toLowerCase();
+    if(c=='a'|| c=='e'||c=='i'||c=='o'||c=='u'){
+        console.log(c+ "It is a vowel");
+    }
+    else{
+        console.log(c+"It is a Consonant");
+
+    }
+    }
+
+    //6.Calculate square no
+    let no=5;
+    let square=no;
+    square *= no;
+    console.log("Square of",no, "is",square);
+
+    //7.Return true only if both input are non-zero no
+    function bothNonZero(a1, a2) {
+        return a1 !== 0 && a2 !== 0;
+    }
+    console.log("Both non-zero (5, 3):", bothNonZero(5, 3)); // true
+    console.log("Both non-zero (0, 3):", bothNonZero(0, 3)); // false
+    console.log("Both non-zero (5, 0):", bothNonZero(5, 0)); // false
+//8.Check if a no lies between two given numbers use only and operator no if or functin uses
+let x = 30, lo = 10, up = 20;
+let isBetween = (x > lo) && (x < up);
+console.log(x + " lies between " + lo + " and " + up + ":", isBetween); 
+
+x = 25;
+isBetween = (x > lo) && (x < up);
+console.log(x + " lies between " + lo + " and " + up + ":", isBetween); 
+
+// 9.Evaluate postfix and prefix operators and logical AND/OR
+let x2 = 0, y2 = 10;
+let and = x2 && y2; 
+let or= x2 || y2; 
+console.log("x2 && y2:", and); // 0
+console.log("x2 || y2:", or); // 10
+console.log("x2 before postfix:", x2);
+console.log("x2++:", x2++); 
+console.log("x2 after postfix:", x2);
+console.log("++x2:", ++x2); 
+console.log("y2 before postfix:", y2);
+console.log("y2--:", y2--); 
+console.log("y2 after postfix:", y2);
+console.log("--y2:", --y2); 
+
+//10.result1=0  and result2=10
+
+
+// 11.Simple even/odd check using user input
+let no1 = prompt("Enter a number:");
+no1 = Number(no1);
+if (!isNaN(no1)) {
+    if (no1 % 2 === 0) {
+        console.log(no1 + " is even");
+    } else {
+        console.log(no1 + " is odd");
+    }
+} else {
+    console.log("Invalid input");
+}
+//12.check if it's positive,negative,or zero
+ let num2_input = prompt("Enter a number :");
+ let num2_check = Number(num2_input);
+if (!isNaN(num2_check)) {
+    if (num2_check > 0) {
+       console.log(num2_check + " is positive");
+   } else if (num2_check < 0) {
+        console.log(num2_check + " is negative");
+    } else {
+      console.log(num2_check + " is zero");
+   }
+} else {
+    console.log("Invalid input");
+}
+// 13.Check if user input year is a leap year
+let year = prompt("Enter a year :");
+year = Number(year);
+if (!isNaN(year)) {
+    if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+        console.log(year + " is a leap year");
+    } else {
+        console.log(year + " is not a leap year");
+    }
+} else {
+   console.log("Invalid input");
+}
+
+//14.check user eligible to vote
+let age = prompt("Enter a age:");
+age = Number(age);
+if (!isNaN(age)) {
+    if (age >= 18) {
+       console.log(age + " Person is eligible ");
+    } else {
+       console.log(age + " person is nor eligible");
+    }} else {
+console.log("Invalid input");
+}
+
+//15.Absolute value
+let absInput = prompt("Enter an integer to get its absolute value:");
+absInput = Number(absInput);
+if (!isNaN(absInput)) {
+    console.log("Absolute value:", Math.abs(absInput));
+} else {
+    console.log("Invalid input");
+}
+
+
+//16. Triangle type checker
+let angle1 = Number(prompt("Enter first angle:"));
+let angle2 = Number(prompt("Enter second angle:"));
+let angle3 = Number(prompt("Enter third angle:"));
+
+if (!isNaN(angle1) && !isNaN(angle2) && !isNaN(angle3)) {
+    if (angle1 > 0 && angle2 > 0 && angle3 > 0 && (angle1 + angle2 + angle3 === 180)) {
+    console.log("Valid triangle");
+        if (angle1 === angle2 && angle2 === angle3) {
+           console.log("Equilateral triangle");
+        } else if (angle1 === angle2 || angle2 === angle3 || angle1 === angle3) {
+           //console.log("Isosceles triangle");
+        } else {
+            console.log("Scalene triangle");
+        }
+    } else {
+        console.log("Not a valid triangle");
+    }
+   } else {
+ console.log("Invalid input");
+}
+
+//17.Smallest of three no
+
+// Smallest of three numbers using only if and if else
+let num1 = Number(prompt("Enter first number:"));
+let num2 = Number(prompt("Enter second number:"));
+let num3 = Number(prompt("Enter third number:"));
+
+if (!isNaN(num1) && !isNaN(num2) && !isNaN(num3)) {
+    let smallest;
+    if (num1 <= num2 && num1<= num3) {
+        smallest = num1;
+    } else if (num2<= nu1 && num2<= num1) {
+        smallest = num2;
+    } else {
+        smallest = num3;
+    }
+    console.log("Smallest number is:", smallest);
+} else {
+    console.log("Invalid input");
+}
+
+
+    </script>
+</body>
+</html>
